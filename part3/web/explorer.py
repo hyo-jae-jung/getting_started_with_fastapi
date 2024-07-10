@@ -16,7 +16,7 @@ def get_one(name) -> Explorer | None:
 
 @router.post("/")
 def create(name, explorer: Explorer) -> Explorer:
-    return service.modify(name, explorer)
+    return service.create(name, explorer)
 
 @router.patch("/{name}")
 def modify(name, explorer: Explorer) -> Explorer:
@@ -24,8 +24,8 @@ def modify(name, explorer: Explorer) -> Explorer:
 
 @router.put("/{name}")
 def replace(name, explorer: Explorer) -> Explorer:
-    return service.modify(name, explorer)
+    return service.replace(name, explorer)
 
 @router.delete("/{name}")
 def delete(name: str):
-    return None
+    return service.delete(name)
