@@ -2,7 +2,8 @@ from fastapi import APIRouter
 import sys
 sys.path.append("/mnt/d/hyojaejung/workspace/Mywork/getting_started_with_fastapi/part3")
 from model.creature import Creature 
-import fake.creature as service 
+# import fake.creature as service 
+import service.creature as service 
 
 router = APIRouter(prefix="/creature")
 

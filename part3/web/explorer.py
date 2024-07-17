@@ -2,7 +2,8 @@ from fastapi import APIRouter
 import sys
 sys.path.append("/mnt/d/hyojaejung/workspace/Mywork/getting_started_with_fastapi/part3")
 from model.explorer import Explorer
-import fake.explorer as service
+# import fake.explorer as service
+import service.explorer as service
 
 router = APIRouter(prefix="/explorer")
 
