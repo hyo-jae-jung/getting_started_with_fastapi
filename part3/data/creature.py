@@ -1,8 +1,8 @@
 import sqlite3 
 import sys
 sys.path.append("/mnt/d/hyojaejung/workspace/Mywork/getting_started_with_fastapi/part3")
+from .init import conn, curs
 from model.creature import Creature 
-# from typing import List
 
 DB_NAME = "cryptid.db"
 conn = sqlite3.connect(DB_NAME)
@@ -53,4 +53,3 @@ def delete(creature: Creature):
     qry = "delete from creature where name = :name"
     params = {"name":creature.name} 
     curs.execute(qry, params)
-    
